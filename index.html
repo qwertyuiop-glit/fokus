@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <html lang="it">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fokus - Concentrati</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+  <div class="app" id="app">
+  <header class="header"><h1 class="logo">Fokus</h1>
+  <div class="session-counter" id="sessionCounter"><span class="session-dot completed"></span><span class="session-dot"></span><span class="session-dot"></span><span class="session-dot"></span></div></header>
+  <main class="main">
+  <div class="mode-selector" id="modeSelector">
+  <button class="mode-btn active" data-mode="focus" id="btnFocus"><span class="mode-icon">&#127919;</span><span class="mode-label">Focus</span></button>
+  <button class="mode-btn" data-mode="short" id="btnShort"><span class="mode-icon">&#9749;</span><span class="mode-label">Pausa</span></button>
+  <span class="mode-label">Pausa</span></button>
+  <button class="mode-btn" data-mode="long" id="btnLong"><span class="mode-icon">&#127807;</span><span class="mode-label">Pausa lunga</span></button></div>
+  <div class="timer-container" id="timerContainer">
+  <svg class="timer-ring" viewBox="0 0 300 300"><circle class="ring-bg" cx="150" cy="150" r="140"/><circle class="ring-progress" cx="150" cy="150" r="140" id="ringProgress"/></svg>
+  <div class="timer-display"><span class="timer-time" id="timerTime">25:00</span><span class="timer-label" id="timerLabel">Pronto a concentrarti?</span></div></div>
+  <div class="controls">
+  <button class="control-btn secondary" id="btnReset" title="Reset"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></button>
+  <button class="control-btn primary" id="btnStart"><svg class="icon-play" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg><svg class="icon-pause hidden" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg></button>
+  <button class="control-btn secondary" id="btnSkip" title="Salta"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg></button></div>
+  <div class="sounds-section"><h2 class="sounds-title">Suoni ambientali</h2>
+  <div class="sounds-grid" id="soundsGrid">
+<button class="sound-btn" data-sound="rain" id="soundRain"><span class="sound-icon">&#127783;&#65039;</span><span class="sound-name">Pioggia</span></button>
+  <button class="sound-btn" data-sound="forest" id="soundForest"><span class="sound-icon">&#127794;</span><span class="sound-name">Foresta</span></button>
+  <button class="sound-btn" data-sound="fire" id="soundFire"><span class="sound-icon">&#128293;</span><span class="sound-name">Camino</span></button>
+  <button class="sound-btn" data-sound="waves" id="soundWaves"><span class="sound-icon">&#127754;</span><span class="sound-name">Onde</span></button>
+  <button class="sound-btn" data-sound="wind" id="soundWind"><span class="sound-icon">&#128168;</span><span class="sound-name">Vento</span></button>
+  <button class="sound-btn" data-sound="cafe" id="soundCafe"><span class="sound-icon">&#9749;</span><span class="sound-name">Caffe</span></button></div></div>
+  <div class="stats-card" id="statsCard">
+  <div class="stat"><span class="stat-value" id="statSessions">0</span><span class="stat-label">Sessioni oggi</span></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><span class="stat-value" id="statMinutes">0</span><span class="stat-label">Minuti focus</span></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><span class="stat-value" id="statStreak">0</span><span class="stat-label">Streak &#128293;</span></div></div>
+  </main>
+  <footer class="footer"><p class="quote" id="quote">"La concentrazione e la radice di tutte le capacita superiori."</p></footer>
+  </div>
+  <script src="app.js"></script>
+  </body>
+  </html>
