@@ -1,0 +1,2 @@
+const MODES={focus:{duration:25*60,label:'Concentrazione',nextLabel:'Tempo di una pausa!'},short:{duration:5*60,label:'Pausa breve',nextLabel:'Torniamo a lavorare!'},long:{duration:15*60,label:'Pausa lunga',nextLabel:'Ricaricato!'}};
+const QUOTES=['"La concentrazione e la radice di tutte le capacita superiori."','"Il segreto del successo e la costanza dello scopo."','"Dove va l attenzione fluisce l energia."','"Non contare i giorni fai che i giorni contino."','"La semplicita e la raffinatezza suprema."'];
